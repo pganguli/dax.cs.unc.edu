@@ -4,7 +4,7 @@ HTML := $(patsubst content/%.md,build/%.html,$(MD))
 
 all: $(HTML) resources
 
-build/%.html: content/%.md templates
+build/%.html: content/%.md templates clean
 	@echo "Building $@ from $<"
 	@mkdir -p $(dir $@)
 	pandoc $< --wrap=preserve --template=templates/base.html -o $@

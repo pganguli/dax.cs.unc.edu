@@ -1,5 +1,5 @@
 :8080 {
-	root * /home/pganguli/dax.cs.unc.edu
+	root * /home/pganguli/dax.cs.unc.edu/build
 	try_files {path} {path}/index.html
 	encode zstd gzip
 	file_server
